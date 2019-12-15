@@ -1,10 +1,13 @@
-h1 Users Site
-form(action="/users/search",method="GET",title="Type name")
-    input(type="text",name='q')
-    button Search
-ul 
-    each user in users
-        li
-            span=user.name
-            span &nbsp;
-            a(href="/users/" + user.id) View 
+html 
+	head
+		link(rel="stylesheet" ,href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css")
+	body
+		form(action="/users/search" method="GET" title="Type name")
+			input(type="text" name='q')
+			button Search
+		ul 
+			each user in users
+				li
+					span=user.name
+					span &nbsp;
+					a(href="/users/" + user.id) View 
